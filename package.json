@@ -4,7 +4,9 @@
   "description": "App - Movies in which it is used  Webpack and Web-components/",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "serve": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -17,9 +19,11 @@
   },
   "homepage": "https://github.com/Krasimir-Kostadinow/Movies-webpack-webComponents#readme",
   "dependencies": {
+    "lit-html": "^2.6.1",
     "webpack-dev-server": "^4.11.1"
   },
   "devDependencies": {
-    "webpack": "^5.76.0"
+    "webpack": "^5.76.0",
+    "webpack-cli": "^5.0.1"
   }
 }
