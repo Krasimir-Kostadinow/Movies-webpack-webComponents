@@ -1,0 +1,13 @@
+h1 {
+    color: red;
+    display: block;
+}
+
+h2 {
+    color: green;
+}
+div {
+    width: 200px;
+    height: 300ph;
+    margin: auto;
+}
