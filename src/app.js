@@ -2,13 +2,16 @@ const { html, render } = require('lit-html');
 const axios = require('axios').default;
 const text = require('../src/commands.txt');
 const appStyle = require('../src/app.css');
+import * as utils from './utils';
 
 const template = (ctx) => html`
 <style>${appStyle}</style>
 <div>
     <button id="btn" @click=${ctx.myShow}>show header</button>
     <h1 id="header">header</h1>
-    <button @click=${ctx.krasi}>krasi console</button>
+    <input id="content" type="text"/> 
+    <br><br><br>
+    <button @click=${ctx.krasi}>show name</button>
     <h2>${ctx.contentText}</h2>
 </div>
     `;
@@ -19,9 +22,13 @@ class AppRoot extends HTMLElement {
 
     contentText = text;
 
-    krasi = () => {
-        console.log('krasi');
-        console.log(this);
+    krasi = (event) => {
+        const divEl = event.target.parentElement;
+        const inputEl = divEl.children[2];
+        let result = utils.myName(inputEl.value);
+        let h2El = divEl.children[7];
+        h2El.textContent = result;
+
     };
 
     constructor() {
@@ -49,14 +56,18 @@ class AppRoot extends HTMLElement {
             }
         }
 
+
+
         this.update();
+
+
     }
 
     connectedCallback() {
-        console.log(123);
         axios.get('https://jsonplaceholder.typicode.com/users').then((users) => {
             console.log(users);
         });
+
     }
 
 

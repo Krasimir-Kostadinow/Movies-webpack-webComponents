@@ -3,7 +3,9 @@ module.exports = {
 
     mode: 'production',
 
-    entry: './src/index.js',
+    devtool: 'sourcemap',
+
+    entry: './src/app.js',
     output: {
         path: __dirname + '/dist',
         filename: 'app.bundle.js'
