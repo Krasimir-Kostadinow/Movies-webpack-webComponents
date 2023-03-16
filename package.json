@@ -2,33 +2,36 @@
   "name": "movies-webpack-webcomponents",
   "version": "1.0.0",
   "description": "App - Movies in which it is used  Webpack and Web-components/",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --watch",
-    "serve": "webpack-dev-server --watch"
+    "watch": "webpack --watch",
+    "start": "webpack serve --open",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Krasimir-Kostadinow/Movies-webpack-webComponents.git"
   },
-  "author": "Krasimir Kostadinov",
-  "license": "ISC",
+  "author": "hvanatOtgorata",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Krasimir-Kostadinow/Movies-webpack-webComponents/issues"
   },
   "homepage": "https://github.com/Krasimir-Kostadinow/Movies-webpack-webComponents#readme",
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
     "axios": "^1.3.4",
-    "lit-html": "^2.6.1"
+    "lit-html": "^2.6.1",
+    "webpack": "^5.76.1",
+    "webpack-cli": "^5.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.0",
+    "@babel/core": "^7.21.3",
     "@babel/preset-env": "^7.20.2",
-    "babel-loader": "^8.3.0",
+    "babel-loader": "^9.1.2",
     "raw-loader": "^4.0.2",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
-  }
+    "webpack-dev-server": "^4.12.0"
+  },
+  "keywords": []
 }
